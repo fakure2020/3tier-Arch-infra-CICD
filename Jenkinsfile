@@ -10,7 +10,7 @@ pipeline {
         stage('Git checkout') {
             steps {
                 echo 'Cloning project codebase...'
-                git branch: 'main', url: 'https://github.com/cvamsikrishna11/devops-fully-automated-infra.git'
+                git branch: 'main', url: 'https://github.com/fakure2020/devops-fully-automated-infra.git'
                 sh 'ls'
             }
         }
@@ -81,13 +81,13 @@ pipeline {
             }
         }
         
-         stage('Terraform destroy') {
-             steps {
-                echo 'Terraform destroy...'                             
-                 sh 'sudo terraform destroy --auto-approve'
+        //  stage('Terraform destroy') {
+        //      steps {
+        //         echo 'Terraform destroy...'                             
+        //          sh 'sudo terraform destroy --auto-approve'
                
-             }
-         }
+        //      }
+        //  }
         
     }
     
